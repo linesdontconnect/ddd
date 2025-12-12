@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State University of Gotham City</title>
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+  <style>
+        body {
+            margin: 0;
+            font-family: 'Merriweather', 'Times New Roman', Times, serif;
+            background-color: #0b0b0b;
+            color: #e6e6e6;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #f0d000;
+        }
+
+        h1, h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #f0d000;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #f0d000;
+        }
+
+        .hero {
+            background: url('gotham_uni_copy.jpg') center/cover no-repeat;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px 20px;
+            margin: 20px auto;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            max-width: 900px;
+        }
+
+        label {
+            color: #e6e6e6;
+        }
+
+        input.form-control {
+            background-color: #0b0b0b;
+            color: #e6e6e6;
+            border: 1px solid #444;
+        }
+
+        input.form-control:focus {
+            background-color: #0b0b0b;
+            color: #e6e6e6;
+            border-color: #f0d000;
+            box-shadow: none;
+        }
+
+        button {
+            background-color: #f0d000;
+            color: #0b0b0b;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #e0c000;
+        }
+
+        .grade-ticket {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: #e6e6e6;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+  </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gotham University</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="clubs.html">School Clubs</a>
+            <a href="gradecalc.html">Your Grade Calculator</a>
+        </nav>
+    </header>
+
+   <section class="hero">
+    <h2 style="color: #524802;">Welcome to Gotham University</h2>
+    <p style="color: #3e3601;">Learn, explore, and grow in the heart of Gotham City.</p>
+</section>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Student Grades Input</h1>
+
+    <form id="gradesForm" onsubmit="return false;">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="first" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="first" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="last" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="last" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="math" class="form-label">Math</label>
+          <input type="number" class="form-control" id="math" min="0" max="100" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="science" class="form-label">Science</label>
+          <input type="number" class="form-control" id="science" min="0" max="100" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="english" class="form-label">English</label>
+          <input type="number" class="form-control" id="english" min="0" max="100" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="filipino" class="form-label">Filipino</label>
+          <input type="number" class="form-control" id="filipino" min="0" max="100" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="ict" class="form-label">ICT</label>
+          <input type="number" class="form-control" id="ict" min="0" max="100" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="pe" class="form-label">PE</label>
+          <input type="number" class="form-control" id="pe" min="0" max="100" required>
+        </div>
+      </div>
+
+      <button py-click="compute_grade" class="btn btn-primary w-100">Calculate Average</button>
+    </form>
+
+    <div class="grade-ticket text-center">
+      <h3>Result</h3>
+      <p id="show1"></p>
+      <p id="show2" class="fs-5 fw-bold text-primary"></p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 The State University of Gotham City — “Why do we fall? So we can get back up again.”
+  </footer>
+
+  <script type="py" src="main.py"></script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gotham University | Clubs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Merriweather', 'Times New Roman', Times, serif;
+            background-color: #0b0b0b;
+            color: #e6e6e6;
+        }
+
+        .hero {
+        background: url('gotham_uni_copy.jpg') center/cover no-repeat;
+        padding: 80px 20px;
+        text-align: center;
+        }
+
+        .hero h2, .hero p {
+        color: #f0d000;
+        margin: 10px 0;
+        }
+
+
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 { color: #f0d000; }
+
+        nav a {
+            margin: 0 10px;
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        nav a:hover { color: #f0d000; }
+
+        .section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        button.club-btn {
+            background-color: #7a0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            margin: 10px 5px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 180px;
+        }
+
+        button.club-btn:hover { background-color: #990000; }
+
+        #club_info_box {
+            background-color: #2c1b1b;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f2dada;
+            font-family: 'Merriweather', 'Times New Roman', Times, serif;
+            text-align: left;
+            min-height: 120px;
+            white-space: pre-wrap;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: #1c1c1c;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Gotham University</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="clubs.html">School Clubs</a>
+        <a href="gradecalc.html">Your Grade Calculator</a>
+    </nav>
+</header>
+
+   <section class="hero">
+    <h2 style="color: #524802;">Welcome to Gotham University</h2>
+    <p style="color: #3e3601;">Learn, explore, and grow in the heart of Gotham City.</p>
+    </section>
+
+
+<div class="section">
+    <h2 style="color:#f0d000;">School Club Information</h2>
+
+    <p><b>Select a club:</b></p>
+    <div id="club-buttons">
+        <button class="club-btn" py-click="ROBCLUB">Robotics Club</button>
+        <button class="club-btn" py-click="CHESSCLUB">Chess Club</button>
+        <button class="club-btn" py-click="FORCLUB">Forensics Society</button>
+        <button class="club-btn" py-click="DRAMCLUB">Drama Guild</button>
+        <button class="club-btn" py-click="GVCCLUB">Gotham Volunteer Corps</button>
+    </div>
+
+    <div id="club_info_box">Click a club to see its information.</div>
+</div>
+
+<footer>
+    © 2025 Gotham University — "Why do we fall? So we can get back up again."
+</footer>
+
+<script type="py" src="clubs.py"></script>
+
+</body>
+</html>
